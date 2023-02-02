@@ -16,6 +16,32 @@ body {
     background: linear-gradient(190deg, rgba(11,13,33,1) 0%, rgba(22,26,66,1) 100%); 
 }
 
+.pop-up{
+    position: absolute;
+    color: white;
+    z-index: 1;
+    background: rgb(11,13,33);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.507);
+    width: 60%;
+    height: 60%;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+#close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: 200ms;
+    border-radius: 12px;
+}
+
+#close:hover{
+    background-color: brown;
+
+}
+
 .section {
     display: flex;
     flex-direction: column;
@@ -76,8 +102,9 @@ body {
     position: absolute;
     bottom: 20px;
     margin-top: 16px;
-    background-color: transparent;
-    border-radius: 8px;
+    background-color: rgb(21, 38, 219);
+    border-radius: 12px;
+    border: 0;
     width: 80px;
     padding: 12px;
     color: white;
@@ -87,11 +114,6 @@ body {
     transition: 150ms;
 }
 
-.enviar:hover {
-    width: 90px;
-    height: 60px;
-    color: green;
-}
 
 .material-symbols-outlined {
     margin-right: 8px;

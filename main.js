@@ -4,9 +4,20 @@ let pontos = document.querySelector('#pontos')
 const form = document.querySelector('.section')
 
 
+//Extraidas para uma função
+function alertCalc(calc, msg) {
+    alert(`${'Média de: '}${+calc.toFixed(0)} ${msg}`)
+}
+
+function fix(element) {
+    return element.toFixed(0);
+}
+
+//Calculando a média
+
 botao.addEventListener('click', (e) => {
     e.preventDefault();
-    var calc = parseInt(pontos.value / materias.value);
+    let calc = parseInt(pontos.value / materias.value);
 
     if (fix(calc) <= 0) {
         const low = 'Sua nota está na baixa, vamos melhorar! :D'
@@ -19,17 +30,14 @@ botao.addEventListener('click', (e) => {
         alertCalc(calc, high);
     }
 
+    //Limpando inputs
+    materias.value = '';
+    pontos.value = '';
+
 
 })
 
 
-//Extraidas para uma função
-function alertCalc(calc, msg) {
-    alert(`${'Média de: '}${+calc.toFixed(0)} ${msg}`)
-}
 
-function fix(element) {
-    return element.toFixed(0);
-}
 
 
