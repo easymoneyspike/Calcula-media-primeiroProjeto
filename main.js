@@ -1,3 +1,4 @@
+// Consts/Var/let
 const botao = document.querySelector('.enviar')
 const popUp = document.querySelector('.pop-up')
 const close = document.getElementById('close')
@@ -8,23 +9,7 @@ let pontos = document.querySelector('#pontos')
 const popUpMedia = document.querySelector('.popUp_media')
 const popUpDesc = document.querySelector('.popUp_descricao')
 
-
-//Extraidas para uma função
-
-function fix(element) {
-    return element.toFixed(1);
-}
-
-function popUpScreen (calc,msg) {
-
-    popUpMedia.textContent = `Sua média é: ${fix(calc)}`;
-    popUpDesc.textContent = msg;
-    return;
-}
-
-
 //Calculando a média
-
 
 botao.addEventListener('click', (e) => {
     e.preventDefault();
@@ -47,9 +32,9 @@ botao.addEventListener('click', (e) => {
     materias.value = '';
     pontos.value = '';
 
+    //PopUp 
     popUp.style.display ='block'
         
-
 })
 
 //Close Pop-Up
@@ -59,13 +44,15 @@ close.addEventListener('click', () => {
 })
 
 
+//Extraidas para uma função
 
+function fix(element) {
+    return element.toFixed(1);
+}
 
+function popUpScreen (calc,msg) {
 
-    
-
-
-
-
-
-
+    popUpMedia.textContent = `Sua média é: ${fix(calc)}`;
+    popUpDesc.textContent = msg;
+    return;
+}
