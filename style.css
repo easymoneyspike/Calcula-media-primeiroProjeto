@@ -12,21 +12,39 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(11,13,33);
-    background: linear-gradient(190deg, rgba(11,13,33,1) 0%, rgba(22,26,66,1) 100%); 
+    background: rgb(11, 13, 33);
+    background: linear-gradient(190deg, rgba(11, 13, 33, 1) 0%, rgba(22, 26, 66, 1) 100%);
 }
 
-.pop-up{
+.pop-up {
+    display: none;
     position: absolute;
     color: white;
     z-index: 1;
-    background: rgb(11,13,33);
+    background: rgb(11, 13, 33);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.507);
     width: 60%;
     height: 60%;
     border-radius: 12px;
     padding: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    transition: 1.5s ease;
+
 }
+
+.infos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 
 #close {
     position: absolute;
@@ -37,7 +55,7 @@ body {
     border-radius: 12px;
 }
 
-#close:hover{
+#close:hover {
     background-color: brown;
 
 }
@@ -58,7 +76,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(11,13,33);
+    background: rgb(11, 13, 33);
     width: 700px;
     max-width: 960px;
     height: 400px;
@@ -68,7 +86,7 @@ body {
     position: relative;
 }
 
-.area > h1 {
+.area>h1 {
     margin-bottom: 18px;
 }
 
@@ -83,7 +101,7 @@ body {
 
 }
 
-.campos > input {
+.campos>input {
     width: 40%;
     margin-top: 6px;
     margin-bottom: 8px;
@@ -92,13 +110,14 @@ body {
     outline: 0;
     border: 2px solid rgb(0, 0, 0);
 }
-.campos > label {
+
+.campos>label {
     display: flex;
     text-align: center;
     margin-left: 2px;
 }
 
-.enviar{
+.enviar {
     position: absolute;
     bottom: 20px;
     margin-top: 16px;
@@ -119,7 +138,7 @@ body {
     margin-right: 8px;
 }
 
-@media screen and (max-width:760px){
+@media screen and (max-width:760px) {
     .area {
         width: 80%;
         padding: 12px;
@@ -127,7 +146,7 @@ body {
 
     }
 
-    .campos > input {
+    .campos>input {
         width: 70%;
     }
 
