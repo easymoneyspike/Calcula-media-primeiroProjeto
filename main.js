@@ -16,16 +16,15 @@ botao.addEventListener('click', (e) => {
 
     let calc = parseInt(pontos.value / materias.value);
 
-    if (fix(calc) >= 0) {
+    if (fix(calc) <= 3.0) {
         const low = 'Sua nota está na baixa, vamos melhorar! :D'
         popUpScreen(calc, low);
-    } else if (fix(calc) >= 3) {
+    } else if (fix(calc) <= 6.0) {
         const medium = 'Sua nota está na média, vamos melhorar! :D'
         popUpScreen(calc, medium);
-    } else if (fix(calc) >= 7) {
+    } else {
         const high = 'Sua nota está na alta, parabéns! :D'
         popUpScreen(calc, high);
-
     }
 
     //Limpando inputs
